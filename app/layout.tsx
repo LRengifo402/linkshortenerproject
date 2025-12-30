@@ -7,9 +7,20 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Logo from './components/Logo';
 import { Button } from '@/components/ui/button';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Link Shortener - Shorten Links, Amplify Reach',
@@ -24,7 +35,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className="dark">
-        <body className="antialiased">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <header className="flex justify-between items-center p-4 gap-4 h-16">
             <Logo />
             <div className="flex items-center gap-4">
