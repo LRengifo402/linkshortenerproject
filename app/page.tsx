@@ -31,9 +31,6 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-              <a href="#features">Learn More</a>
-            </Button>
           </div>
         </div>
       </section>
