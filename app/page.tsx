@@ -3,12 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Link2, Zap, BarChart3, Shield, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
-
-export default async function Home() {
-  // Note: Auth redirect moved to client-side or will be handled by middleware
-  // This allows the page to render without requiring valid Clerk keys
-  
+export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
